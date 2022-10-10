@@ -1,0 +1,11 @@
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+.navbar h4{
+    font-family: lato;
+    font-weight: 900;
+}
+.nav-item a {
+    font-weight: 700;
+}
