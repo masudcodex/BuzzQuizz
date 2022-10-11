@@ -1,8 +1,12 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useLoaderData } from 'react-router-dom';
+import QuizTopic from '../QuizTopic/QuizTopic';
 import './Home.css';
 
 const Home = () => {
+    const quizTopics = useLoaderData().data;
+    console.log(quizTopics);
     return (
         <div>
             <div className="hero-banner">
@@ -16,6 +20,26 @@ const Home = () => {
                     </Row>
                 </Container> 
             </div>
+            <div>
+                <Container>
+                    <div className='py-5'>
+                        <div className='pb-5'>
+                            <h3 align="start">Featured Quizzes</h3>
+                            <hr className='text-success'/>
+                        </div>
+                        <Row>
+                            {
+                                quizTopics.map(quizTopic => <QuizTopic 
+                                    key={quizTopic.id} 
+                                    quizTopic={quizTopic}
+                                    >
+                                    </QuizTopic>)
+                            }
+                        </Row>
+                    </div>
+                </Container>
+            </div>
+            
         </div>
     );
 };
