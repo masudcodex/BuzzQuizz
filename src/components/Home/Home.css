@@ -1,0 +1,11 @@
+.hero-banner{
+    background-image: url('../../images/34147.png');
+    padding: 50px 0;
+}
+.hero-banner h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+.hero-banner p{
+    font-size: 18px;
+}
