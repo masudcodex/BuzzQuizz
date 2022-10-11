@@ -3,6 +3,7 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 import './QuizTopic.css';
+import Quiz from '../Quiz/Quiz';
 
 const QuizTopic = ({quizTopic}) => {
     const {id, name, logo, total} = quizTopic;
@@ -15,17 +16,11 @@ const QuizTopic = ({quizTopic}) => {
                 <Card.Title>{name}</Card.Title>
                 </Card.Body>
                 <Card.Footer className='bg-transparent'>
-                    <Link>
+                    <Link to={`/${id}`}>
                     <Button>Start Quiz <ArrowRightIcon className='icon'/></Button>
                     </Link>
                 </Card.Footer>
             </Card>
-            
-            
-            
-            {/* <h2>{name}</h2>
-            <img src={logo} alt="" />
-            <p>Total quiz: {total}</p> */}
         </Col>
     );
 };

@@ -6,7 +6,6 @@ import './Home.css';
 
 const Home = () => {
     const quizTopics = useLoaderData().data;
-    console.log(quizTopics);
     return (
         <div>
             <div className="hero-banner">
