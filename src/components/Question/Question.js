@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import parse from 'html-react-parser';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, FormLabel, Row } from 'react-bootstrap';
 import './Question.css';
 
 const Question = ({ques, handleClickAnswer}) => {
@@ -9,6 +9,8 @@ const Question = ({ques, handleClickAnswer}) => {
     const { id, correctAnswer, options, question} = quest;
     const parsedQuestion = parse(question);
     const qs = parsedQuestion.props.children;
+
+
     return (
         <div>
             <Container className="px-3 py-5">
@@ -17,10 +19,10 @@ const Question = ({ques, handleClickAnswer}) => {
                 </div>
                 <Row className="justify-content-center">
                     {
-                        options.map((option, index)=> 
-                        <Col sm={12} md={5} key={index} className="quiz-options form-check text-start px-2 py-3 m-2 border rounded-3">
-                            <input onClick={()=> handleClickAnswer(this.name)} type="radio" name="quizOption" id="quizOptions"/>
-                            <label className="form-check-label ms-2" for="quizOptions">
+                        options.map((option, index, question)=> 
+                        <Col sm={12} md={5} key={index} className={`quiz-options form-check text-start px-2 py-3 m-2 border rounded-3`}>
+                            <input onClick={()=> handleClickAnswer({option, correctAnswer})} type="radio" name="quizOption" id="quizOptions" value={correctAnswer}/>
+                            <label className="form-check-label ms-2">
                                 {option}
                             </label>
                         </Col>
