@@ -3,7 +3,6 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 import './QuizTopic.css';
-import Quiz from '../Quiz/Quiz';
 
 const QuizTopic = ({quizTopic}) => {
     const {id, name, logo, total} = quizTopic;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import parse from 'html-react-parser';
-import { Col, Container, FormLabel, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { EyeIcon } from '@heroicons/react/24/solid';
 import './Question.css';
 import { toast } from 'react-toastify';

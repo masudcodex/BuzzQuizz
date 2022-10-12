@@ -9,3 +9,7 @@
 .nav-item a {
     font-weight: 700;
 }
+.active{
+    color: green !important;
+    text-decoration: underline;
+}
