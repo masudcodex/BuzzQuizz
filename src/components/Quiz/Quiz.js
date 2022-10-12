@@ -19,7 +19,7 @@ const Quiz = () => {
             });
             
         }else{
-            toast.error('Your answer is wrong !', {
+            toast.error(`Your answer is wrong !`, {
                 position: toast.POSITION.TOP_RIGHT
             });
 
@@ -27,11 +27,11 @@ const Quiz = () => {
         return;
     }
     return (
-        <div>    
+        <div>   
+            <div className='quiz-heading page-header'>
+                <h2 className='fw-bolder'>Quiz of {name}</h2>
+            </div> 
             <Container>
-                <div className='quiz-heading'>
-                    <h2 className='fw-bolder'>Quiz of {name}</h2>
-                </div>
                 <div>
                     {
                         questions.map((question, index)=> <Question key={question.id} ques={[question, index]} handleClickAnswer={handleClickAnswer}></Question>)

@@ -1,3 +1,19 @@
+.quiz-single{
+    background-color: #FFF5C4;
+    border-radius: 15px;
+    position: relative;
+}
+.question-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
 .quiz-options{
     background-color: lightgray !important;
+}
+#quizOptions{
+    cursor: pointer;
 }
