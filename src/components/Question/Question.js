@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import parse from 'html-react-parser';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { EyeIcon } from '@heroicons/react/24/solid';
 import './Question.css';
@@ -9,8 +8,6 @@ const Question = ({ques, handleClickAnswer}) => {
     const [quest, index] = ques;
     const idx = index +  1;
     const { id, correctAnswer, options, question} = quest;
-    // const parsedQuestion = parse(question);
-    // const qs = parsedQuestion.props.children;
 
     const handleShowAnswer = (ans) => {
         toast.success(`The Correct answer is: ${ans} !`, {
