@@ -1,0 +1,17 @@
+.page-header{
+    background-image: url('../../images/34147.png');
+    padding: 50px 0;
+}
+.page-header h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+.page-header p{
+    font-size: 15px;
+}
+.statisticalChart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
