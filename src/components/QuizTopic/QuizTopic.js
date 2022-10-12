@@ -16,7 +16,7 @@ const QuizTopic = ({quizTopic}) => {
                 </Card.Body>
                 <Card.Footer className='bg-transparent'>
                     <Link to={`/${id}`}>
-                    <Button>Start Quiz <ArrowRightIcon className='icon'/></Button>
+                        <Button>Start Quiz <ArrowRightIcon className='icon'/></Button>
                     </Link>
                 </Card.Footer>
             </Card>

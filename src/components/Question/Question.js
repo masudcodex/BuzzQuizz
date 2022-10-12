@@ -9,8 +9,8 @@ const Question = ({ques, handleClickAnswer}) => {
     const [quest, index] = ques;
     const idx = index +  1;
     const { id, correctAnswer, options, question} = quest;
-    const parsedQuestion = parse(question);
-    const qs = parsedQuestion.props.children;
+    // const parsedQuestion = parse(question);
+    // const qs = parsedQuestion.props.children;
 
     const handleShowAnswer = (ans) => {
         toast.success(`The Correct answer is: ${ans} !`, {
@@ -23,7 +23,7 @@ const Question = ({ques, handleClickAnswer}) => {
             <Container className="py-5 my-5 quiz-single">
                 <span onClick={()=>handleShowAnswer(correctAnswer)}><EyeIcon className='question-icon'/></span>
                 <div className='w-75 m-auto pb-4'>
-                    <h2>Quiz {idx}: {qs}</h2>
+                    <div><span><b>Quiz {idx}</b></span><h2 dangerouslySetInnerHTML={{ __html: question }}></h2></div>
                 </div>
                 <Row className="justify-content-center">
                     {
