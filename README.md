@@ -1,4 +1,4 @@
-Git Repository Link: https://github.com/programming-hero-web-course2/b6-quiz-crackerz-masudcodex.
+Git Repository Link: https://github.com/masudcodex/BuzzQuizz.git
 
 Live Site Link: https://buzzquiz007.netlify.app/
 
